@@ -1,0 +1,9 @@
+Started this project on 9 November 2021
+
+Requirements
+1)Responsive design (I will use grid to make it responsive)
+2)Functional components 
+3)use Hooks 
+4)use grid to make responsive 
+
+=>Figure out the type of cards you want to create and the images to use.
