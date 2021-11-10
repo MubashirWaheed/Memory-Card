@@ -7,3 +7,12 @@ Requirements
 4)use grid to make responsive 
 
 =>Figure out the type of cards you want to create and the images to use.
+-------------------------------------
+
+10 November 2021
+=> Figure out how to dynamically import images
+=> figure out how onclick will be applied on image if dynamically added.
+=> Add unique id for each Image 
+
+11 November 2021
+=> Make cards responsive using grid
