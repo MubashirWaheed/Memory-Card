@@ -1,0 +1,9 @@
+.cards {
+  display: grid;
+  /* grid-template-columns: 1fr 1fr 1fr 1fru; */
+  grid-template-columns: repeat(auto-fit, 1fr);
+}
+.card1 {
+  background-repeat: no-repeat;
+  border: 1px solid rgb(212, 182, 242);
+}

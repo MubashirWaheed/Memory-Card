@@ -16,3 +16,12 @@ Requirements
 
 11 November 2021
 => Make cards responsive using grid
+---------------
+=>Read about React context
+=> I forgot I have to randomize the images
+
+-----------------------
+=> Implement randomization 
+    Useffect
+=> Add uniq ids 
+=> maintain score 
