@@ -1,11 +1,10 @@
-import React , {useState} from "react";
+import React from "react";
 import scorescss from '../styles/Scores.module.css';
 
-function Scores(){
+function Scores(props){
+    const {currentscore,highestScore} = props
+
     let message = "Lorem ipsum consectetur adipisicing elit. Hic, modi istefugiat? velit labore animi eaque, quo molestias fugit reiciendis iusto ducimus soluta, ad mis numquam. Perferendis, ducimus neque veniam."
-    const [instruction , setinstruction] = useState(message);
-    const [currentscore, setcurrentscore] = useState(0);
-    const [highestScore, sethighestScore] = useState(0);
 
     return(
         <div>

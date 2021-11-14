@@ -1,8 +1,8 @@
-import React, {useState} from "react";
+import React, {useState,useEffect} from "react";
 import cardscss from "../styles/Cards.module.css"
 import { data } from "../Assets/data";
 
-// Randomization of array elelmets 
+
 function shuffleArray(array) {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -10,24 +10,49 @@ function shuffleArray(array) {
     }
     return array;
 }
-function Cards(){
-    const [imageState, setimagesState] = useState(data);
 
-    const photoClicked = ()=>{
-        let newDataSet = []
-        newDataSet = [...shuffleArray(data)]
-        setimagesState(newDataSet);
+function Cards(props){
+    const [imageState, setimagesState] = useState(data);
+    const {currentscore, setcurrentscore, highestScore, sethighestScore} = props
+
+    
+    function restart(){
+        setcurrentscore(0);
+        setimagesState([...data]);
     }
-    return(
+
+    const photoClicked = (id)=>{
+        for(let x = 0; x< data.length-1; x++){
+            if(imageState[x].id === id && imageState[x].clicked === false){
+                let list = [...imageState];
+                list[x].clicked = true;
+                setimagesState([...list]);
+                setcurrentscore(currentscore + 1);
+                setimagesState(shuffleArray(imageState))
+
+                break;
+            }else if(imageState[x].id === id && imageState[x].clicked === true){
+                // Check If get currentscore greater than hightest Scores
+                if(currentscore > highestScore) sethighestScore(currentscore);
+                
+                // call a function that restarts the game 
+                restart();
+                break;
+            }
+        }
+    }
+
+    return( 
         <div className={cardscss.cards}>
-            {data.map((item)=>
+            {imageState.map(item =>
                 <div className={cardscss.card} key={item.id} >
-                    <img src={require(`../images/${item.url}`).default} alt="pokemon" onClick={photoClicked} />
+                    <img src={require(`../images/${item.url}`).default} alt="pokemon" onClick={()=>photoClicked(item.id)} />
                     <h4>{item.url}</h4>
                 </div>
                 )
             }
         </div>
+        
     )
 }
 
