@@ -12,13 +12,12 @@ function shuffleArray(array) {
 }
 
 function Cards(props){
-    const [imageState, setimagesState] = useState(data);
+    const [imageState, setimagesState] = useState(JSON.parse(JSON.stringify(data)));
     const {currentscore, setcurrentscore, highestScore, sethighestScore} = props
-
-    
+ 
     function restart(){
         setcurrentscore(0);
-        setimagesState([...data]);
+        setimagesState(JSON.parse(JSON.stringify(data)));
     }
 
     const photoClicked = (id)=>{
@@ -26,22 +25,18 @@ function Cards(props){
             if(imageState[x].id === id && imageState[x].clicked === false){
                 let list = [...imageState];
                 list[x].clicked = true;
-                setimagesState([...list]);
+                setimagesState(JSON.parse(JSON.stringify(list)));
                 setcurrentscore(currentscore + 1);
-                setimagesState(shuffleArray(imageState))
-
+                setimagesState(JSON.parse(JSON.stringify(shuffleArray(imageState))))
                 break;
             }else if(imageState[x].id === id && imageState[x].clicked === true){
-                // Check If get currentscore greater than hightest Scores
-                if(currentscore > highestScore) sethighestScore(currentscore);
-                
+                if(currentscore > highestScore) sethighestScore(currentscore); 
                 // call a function that restarts the game 
                 restart();
                 break;
             }
         }
     }
-
     return( 
         <div className={cardscss.cards}>
             {imageState.map(item =>
@@ -52,7 +47,6 @@ function Cards(props){
                 )
             }
         </div>
-        
     )
 }
 
