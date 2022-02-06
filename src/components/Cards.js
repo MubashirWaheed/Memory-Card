@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from "react";
+import React, {useState} from "react";
 import cardscss from "../styles/Cards.module.css"
 import { data } from "../Assets/data";
 
@@ -31,7 +31,7 @@ function Cards(props){
                 break;
             }else if(imageState[x].id === id && imageState[x].clicked === true){
                 if(currentscore > highestScore) sethighestScore(currentscore); 
-                // call a function that restarts the game 
+                // Restarts the game 
                 restart();
                 break;
             }

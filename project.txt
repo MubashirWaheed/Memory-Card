@@ -22,6 +22,5 @@ Requirements
 
 -----------------------
 => Implement randomization 
-    Useffect
 => Add uniq ids 
 => maintain score 
