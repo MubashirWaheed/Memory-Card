@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/Memory-Card/static/css/main.727ad254.chunk.css",
+    "main.js": "/Memory-Card/static/js/main.ffd9c20f.chunk.js",
+    "main.js.map": "/Memory-Card/static/js/main.ffd9c20f.chunk.js.map",
+    "runtime-main.js": "/Memory-Card/static/js/runtime-main.fbb9a9ba.js",
+    "runtime-main.js.map": "/Memory-Card/static/js/runtime-main.fbb9a9ba.js.map",
+    "static/js/2.c3efc42b.chunk.js": "/Memory-Card/static/js/2.c3efc42b.chunk.js",
+    "static/js/2.c3efc42b.chunk.js.map": "/Memory-Card/static/js/2.c3efc42b.chunk.js.map",
+    "index.html": "/Memory-Card/index.html",
+    "static/css/main.727ad254.chunk.css.map": "/Memory-Card/static/css/main.727ad254.chunk.css.map",
+    "static/js/2.c3efc42b.chunk.js.LICENSE.txt": "/Memory-Card/static/js/2.c3efc42b.chunk.js.LICENSE.txt",
+    "static/media/bayleef.jpg": "/Memory-Card/static/media/bayleef.29f6c83d.jpg",
+    "static/media/deoxys.jpg": "/Memory-Card/static/media/deoxys.644193e8.jpg",
+    "static/media/meganium.jpg": "/Memory-Card/static/media/meganium.40b32e21.jpg",
+    "static/media/pumpkaboo.jpg": "/Memory-Card/static/media/pumpkaboo.524381b5.jpg",
+    "static/media/riolu.jpg": "/Memory-Card/static/media/riolu.5b02f029.jpg",
+    "static/media/wooper.jpg": "/Memory-Card/static/media/wooper.3147b60b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.fbb9a9ba.js",
+    "static/js/2.c3efc42b.chunk.js",
+    "static/css/main.727ad254.chunk.css",
+    "static/js/main.ffd9c20f.chunk.js"
+  ]
+}
